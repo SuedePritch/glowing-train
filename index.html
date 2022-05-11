@@ -9,37 +9,46 @@
     <title>James Pritchard</title>
 </head>
 <body>
-    <header class="profile">
-        <h1>James Pritchard</h1>
-        <img src="james.jpeg" alt="" srcset="">
+    <header id="profile">
         <nav class="navlinks">
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="">Github</a></li>
+                <li class="navlink"><a href="#about">About</a></li>
+                <li class="navlink"><a href="#projects">Projects</a></li>
+                <li class="navlink"><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header> 
+
     <main>
-        <section class="about">
-            <h2>A Little About Myself</h2>
+        <section class="user-title">
+            <img src="./assets/images/default-user.png" alt="Picture of James Pritchard" id="user-avatar">
+            <h1>James Pritchard</h1>
+        </section>
+        <section id="about">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nesciunt enim totam illo impedit quo voluptatibus odit numquam omnis vel.</p>
         </section>
-        <section class="projects">
+        <section id="projects">
             <h2>Projects</h2>
-            <img src="image-1" alt="">
-            <img src="image-2" alt="">
-            <img src="image-3" alt="">
-            <img src="image-4" alt="">
+            <img src="assets/images/image-1.png" alt="">
+            <img src="assets/images/image-2.png" alt="">
+            <img src="assets/images/image-3.png" alt="">
+            <img src="assets/images/image-4.png" alt="">
         </section>
-        <section class="contact">
-            <h2></h2>
+        <section id="contact">
+            <h2>Contact Me</h2>
             <ul>
                 <li><a href="">Email</a></li>
                 <li><a href="">Phone</a></li>
+                <li><a href="">Github</a></li>
                 <li><a href="">LinkedIn</a></li>
             </ul>
+            <form>
+                <label for="name" class="name">Name</label>
+                <input type="text" name="name" id="name"/>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <button type="submit">Send</button>
+            </form>
         </section>
     </main>
 </body>
