@@ -1,19 +1,24 @@
 :root{
-    --clr-primary-200:hsl(17, 100%,20%);
-    --clr-primary-400:hsl(17, 100%,40%);
-    --clr-primary-600:hsl(17, 100%,60%);
-    --clr-primary-800:hsl(17, 100%,80%);
+    
+    --clr-primary-200:hsl(170, 100%, 20%);
+    --clr-primary-400:hsl(170, 100%,40%);
+    --clr-primary-600:hsl(170, 100%, 60%);
+    --clr-primary-800:hsl(170, 100%,80%);
 
-    --clr-accent-200:hsl(197, 100%,20%);
-    --clr-accent-400:hsl(197, 100%,40%);
-    --clr-accent-600:hsl(197, 100%,60%);
-    --clr-accent-800:hsl(197, 100%,80%);
+    --clr-accent-200:hsl(257, 100%,20%);
+    --clr-accent-400:hsl(257, 100%,40%);
+    --clr-accent-600:hsl(257, 100%,60%);
+    --clr-accent-800:hsl(257, 100%,80%);
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+    
 }
 header{
     display: flex;
@@ -22,13 +27,24 @@ header{
 
 section{
     height: 100vh;
+    width: 100vw;
 }
+.snap{
+    scroll-snap-align: start;
+}
+
+
+
 /* navigation links */
 .navlinks{
+    padding-left:1rem;
     position: fixed;
     bottom:0;
     right:0;
-    background-color: var(--clr-accent-800);
+    z-index: 2;
+    background-color: var(--clr-accent-400);
+    border-top-left-radius: 50px;
+    
 
 }
 .navlinks ul{
@@ -41,13 +57,81 @@ section{
     list-style-type: none;
 }
 .navlink a{
+    color: white;
+    font-size: 1.3em;
+    font-weight: 900;
     text-decoration: none;
 }
-/* user name and avatar  */
+
+
+/*  Name and avatar  */
 .user-title{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: colorshift 5s alternate infinite ease-in-out;
 }
-/* avatar or picture of user */
+
+@keyframes colorshift {
+    0%{
+        background: var(--clr-primary-400);
+
+    }
+    100%{
+        background: var(--clr-accent-600);
+        
+    }
+    
+}
+
+
+.user-title h1{
+    font-size: 6em;
+    font-family: 'Arizonia', cursive;
+    z-index: 2;
+}
 #user-avatar{
-    height:30px;
+    width:200px;
+    z-index: 1;
+    
+}
+
+
+/* Project mosaic */
+.projects{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:1rem;
+}
+#project1{
+    grid-column: span 3;
+    grid-row: span 2;
+    background-color: var(--clr-primary-200);
+}
+
+#project2{
+    grid-column: span 1;
+    grid-row: span 2;
+    background-color: var(--clr-primary-400);
+}
+
+#project3{
+    grid-column: span 2;
+    grid-row: span 1;
+    background-color: var(--clr-accent-800);
+}
+
+#project4{
+    grid-column: span 2;
+    grid-row: span 1;
+    background-color: var(--clr-primary-800);
+}
+
+
+.about{
+    background-color: var(--clr-accent-200);
+}
+.contact{
+    background-color: var(--clr-primary-400);
 }

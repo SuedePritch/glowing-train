@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image" href="./assets/JP.png">
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    
+    
     <title>James Pritchard</title>
 </head>
 <body>
-    <header id="profile">
+    <header>
         <nav class="navlinks">
             <ul>
                 <li class="navlink"><a href="#about">About</a></li>
@@ -20,21 +26,22 @@
     </header> 
 
     <main>
-        <section class="user-title">
-            <img src="./assets/images/default-user.png" alt="Picture of James Pritchard" id="user-avatar">
+        <section class="user-title snap">
             <h1>James Pritchard</h1>
+            <br>
+            <h2>Full Stack Developer</h2>
         </section>
-        <section id="about">
+        <section id="about" class="about snap">
+            <img src="./assets/images/default-user.png" alt="Picture of James Pritchard" id="user-avatar">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae nesciunt enim totam illo impedit quo voluptatibus odit numquam omnis vel.</p>
         </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <img src="assets/images/image-1.png" alt="">
-            <img src="assets/images/image-2.png" alt="">
-            <img src="assets/images/image-3.png" alt="">
-            <img src="assets/images/image-4.png" alt="">
+        <section class="projects snap" id="projects">
+            <article id="project1"></article>
+            <article id="project2"></article>
+            <article id="project3"></article>
+            <article id="project4"></article>
         </section>
-        <section id="contact">
+        <section id="contact" class="contact snap">
             <h2>Contact Me</h2>
             <ul>
                 <li><a href="">Email</a></li>
