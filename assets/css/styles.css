@@ -107,37 +107,50 @@ a{
 .projects{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap:0.5rem;
-    background-color: var(--clr-accent-400);
+    gap:1rem;
+    background-color: black;
 }
 
 #project1{
     grid-column: span 4;
     grid-row: span 2;
-    background-color: var(--clr-primary-200);
+    background-image: url('/assets/images/veggies.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 #project2{
     grid-column: span 2;
-    grid-row: span 2;
-    background-color: var(--clr-primary-400);
+    grid-row: span 1;
+    background-image: url('/assets/images/bubbles.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
 }
 
 #project3{
     grid-column: span 2;
     grid-row: span 1;
-    background-color: var(--clr-primary-600);
+    background-image: url('/assets/images/forest.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 #project4{
     grid-column: span 2;
     grid-row: span 1;
-    background-color: var(--clr-primary-800);
+    background-image: url('/assets/images/painting.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 #project5{
     grid-column: span 2;
-    grid-row: span 1;
-    background-color: var(--clr-primary-200);
+    grid-row: span 2;
+    grid-column: 5 / 7;
+    grid-row: 2 / 4;
+    background-image: url('/assets/images/northernlights.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 
@@ -264,84 +277,3 @@ a{
         height: 100px;
     }
 }
-
-
-
-
-
-/* SVG Logo styling and animations */
-/*Spine color*/
-.cervical,
-.filled1,
-.thoracic,
-.center,
-.filled2,
-.lumbar,
-.sacrum{
-    fill:var(--clr-accent-400)
-}
-/* Border Circle */
-.outline-out{
-    fill:var(--clr-accent-200)
-}
-/* Padding and Inner background*/
-.outline-in,
-.whitespace1,
-.whitespace2,
-rect
-{
-    fill:var(--clr-primary-800);
-}
-
-
-.cervical{
-    animation: cervical 3000ms ease-in-out infinite alternate-reverse;
-    position: relative;
-    -webkit-animation: cervical 3000ms ease-in-out infinite alternate-reverse;}
-@keyframes cervical {
-    0%    { transform: translate(0);} 
-    100%   {transform: translate(-4%, -3%);}}
-
-.upperThoracic{
-    position: relative;
-    animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;
-    -webkit-animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;}
-@keyframes upperThoracic {
-    0%    { transform: translate(0);} 
-    100%    { transform: translate(-5%, -2%);}}
-
-.thoracic{
-    position: relative;
-    animation: thoracic 3000ms 300ms ease-in-out infinite alternate-reverse;
-    -webkit-animation: thoracic 3000ms 300ms ease-in-out infinite alternate-reverse;}
-@keyframes thoracic {
-    0%    { transform: translate(0px);} 
-    100%   {transform: translate(-5%, -1%);}}
-.center{
-    position: relative;
-    animation: center 3000ms 300ms ease-in-out infinite alternate-reverse;
-    -webkit-animation: center 3000ms 300ms ease-in-out infinite alternate-reverse;}
-@keyframes center {
-    0%    { transform: translate(0px);} 
-    100%   {transform: translate(1%, -1%);}}
-.lumbar{
-    position: relative;
-    animation: lumbar 3000ms 350ms ease-in-out infinite alternate;
-    -webkit-animation: lumbar 3000ms 350ms ease-in-out infinite alternate;}
-@keyframes lumbar {
-    0%    { transform: translate(0);}  
-    100%    {transform: translate(-7%, 3%)}}
-.lowerLumbar{
-    position: relative;
-    animation: lowerLumbar 3000ms 400ms ease-in-out infinite alternate;
-    -webkit-animation: lowerLumbar 3000ms 400ms ease-in-out infinite alternate;}
-@keyframes lowerLumbar {
-    0%    { transform: translateX(0);} 
-    100%    { transform: translateX(-7%);}  }
-.sacrum{
-    position: relative;
-    animation: sacrum 3000ms  450ms ease-in-out infinite alternate-reverse;   
-    -webkit-animation: sacrum 3000ms  450ms ease-in-out infinite alternate-reverse;} 
-@keyframes sacrum {
-    0%    { transform: translateX(-3px);} 
-    100%   {transform: translateX(3px);}}
