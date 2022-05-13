@@ -3,7 +3,7 @@
     --clr-primary-200:hsl(170, 100%, 20%);
     --clr-primary-400:hsl(170, 100%,40%);
     --clr-primary-600:hsl(170, 100%, 60%);
-    --clr-primary-800:hsl(170, 100%,80%);
+    --clr-primary-800:hsl(170, 100%, 80%);
 
     --clr-accent-200:hsl(257, 100%,20%);
     --clr-accent-400:hsl(257, 100%,40%);
@@ -27,7 +27,11 @@ header{
 
 section{
     height: 100vh;
-    width: 100vw;
+}
+a{
+    font-size: 1.3em;
+    font-weight: 900;
+    text-decoration: none;
 }
 .snap{
     scroll-snap-align: start;
@@ -44,8 +48,17 @@ section{
     z-index: 2;
     background-color: var(--clr-accent-400);
     border-top-left-radius: 50px;
-    
+    animation: nav 4s forwards ease;
+}
 
+@keyframes nav {
+    0%{
+        transform: translateX(600px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    
 }
 .navlinks ul{
     display: flex;
@@ -53,14 +66,12 @@ section{
     text-align: center;
 }
 .navlink{
-    padding:1rem 1.5rem;
+    margin-top: 0.5rem;
+    padding:1.2rem 1.5rem;
     list-style-type: none;
 }
 .navlink a{
-    color: white;
-    font-size: 1.3em;
-    font-weight: 900;
-    text-decoration: none;
+    color:white;
 }
 
 
@@ -85,33 +96,29 @@ section{
     
 }
 
-
 .user-title h1{
     font-size: 6em;
     font-family: 'Arizonia', cursive;
     z-index: 2;
-}
-#user-avatar{
-    width:200px;
-    z-index: 1;
-    
 }
 
 
 /* Project mosaic */
 .projects{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap:1rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap:0.5rem;
+    background-color: var(--clr-accent-400);
 }
+
 #project1{
-    grid-column: span 3;
+    grid-column: span 4;
     grid-row: span 2;
     background-color: var(--clr-primary-200);
 }
 
 #project2{
-    grid-column: span 1;
+    grid-column: span 2;
     grid-row: span 2;
     background-color: var(--clr-primary-400);
 }
@@ -119,19 +126,222 @@ section{
 #project3{
     grid-column: span 2;
     grid-row: span 1;
-    background-color: var(--clr-accent-800);
+    background-color: var(--clr-primary-600);
 }
-
 #project4{
     grid-column: span 2;
     grid-row: span 1;
     background-color: var(--clr-primary-800);
 }
 
+#project5{
+    grid-column: span 2;
+    grid-row: span 1;
+    background-color: var(--clr-primary-200);
+}
+
+
+
 
 .about{
-    background-color: var(--clr-accent-200);
-}
-.contact{
+    display: flex;
     background-color: var(--clr-primary-400);
 }
+.about p{
+    display: flex;
+    align-items: center;
+    max-width:40ch;
+    margin: 0 auto;
+    padding:0 2.5rem;
+    font-size: 1.5em;
+    font-weight: 900;
+    word-wrap: break-word;
+}
+#user-avatar{
+    min-width:450px;
+    max-width:40vw;
+    opacity: 0.6;
+    z-index: 1;  
+}
+
+/* contact section  */
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-primary-400);
+}
+.contact h2{
+    font-size: 4em;
+}
+.contact ul{
+    display:flex;
+}
+.contact li{
+    padding: 1rem;
+    flex-direction: row;
+    list-style: none;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+}
+.contact label{
+    margin:0.75rem 0;
+    font-size: 1.3em;
+}
+.contact button{
+    margin-top: 2rem;
+    padding: 2rem 3.5rem;
+    background-color: var(--clr-accent-400);
+    font-size: 1.6em;
+    color:white;
+    border: none;
+    border-radius: 5px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+@media screen and (max-width:700px) {
+    .user-title h1{
+        font-size: 3em;
+    }
+    .navlink{
+        padding:0.8rem 1rem;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about p{
+        padding: 1rem 1rem;
+    }
+    #user-avatar{
+        border-bottom-right-radius: 50px;
+        min-width: 200px;
+    }
+    .projects{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap:0.25rem;
+    }
+    #project1{
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    
+    #project2{
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    
+    #project3{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    
+    #project4{
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    #project5{
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+    .contact h2{
+        font-size: 1.8em;
+    }
+    .contact ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact li{
+        padding:0;
+    }
+    .contact button{
+        padding: 1rem 2rem;
+    }
+    textarea{
+        height: 100px;
+    }
+}
+
+
+
+
+
+/* SVG Logo styling and animations */
+/*Spine color*/
+.cervical,
+.filled1,
+.thoracic,
+.center,
+.filled2,
+.lumbar,
+.sacrum{
+    fill:var(--clr-accent-400)
+}
+/* Border Circle */
+.outline-out{
+    fill:var(--clr-accent-200)
+}
+/* Padding and Inner background*/
+.outline-in,
+.whitespace1,
+.whitespace2,
+rect
+{
+    fill:var(--clr-primary-800);
+}
+
+
+.cervical{
+    animation: cervical 3000ms ease-in-out infinite alternate-reverse;
+    position: relative;
+    -webkit-animation: cervical 3000ms ease-in-out infinite alternate-reverse;}
+@keyframes cervical {
+    0%    { transform: translate(0);} 
+    100%   {transform: translate(-4%, -3%);}}
+
+.upperThoracic{
+    position: relative;
+    animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;
+    -webkit-animation: upperThoracic 3000ms ease-in-out infinite alternate-reverse;}
+@keyframes upperThoracic {
+    0%    { transform: translate(0);} 
+    100%    { transform: translate(-5%, -2%);}}
+
+.thoracic{
+    position: relative;
+    animation: thoracic 3000ms 300ms ease-in-out infinite alternate-reverse;
+    -webkit-animation: thoracic 3000ms 300ms ease-in-out infinite alternate-reverse;}
+@keyframes thoracic {
+    0%    { transform: translate(0px);} 
+    100%   {transform: translate(-5%, -1%);}}
+.center{
+    position: relative;
+    animation: center 3000ms 300ms ease-in-out infinite alternate-reverse;
+    -webkit-animation: center 3000ms 300ms ease-in-out infinite alternate-reverse;}
+@keyframes center {
+    0%    { transform: translate(0px);} 
+    100%   {transform: translate(1%, -1%);}}
+.lumbar{
+    position: relative;
+    animation: lumbar 3000ms 350ms ease-in-out infinite alternate;
+    -webkit-animation: lumbar 3000ms 350ms ease-in-out infinite alternate;}
+@keyframes lumbar {
+    0%    { transform: translate(0);}  
+    100%    {transform: translate(-7%, 3%)}}
+.lowerLumbar{
+    position: relative;
+    animation: lowerLumbar 3000ms 400ms ease-in-out infinite alternate;
+    -webkit-animation: lowerLumbar 3000ms 400ms ease-in-out infinite alternate;}
+@keyframes lowerLumbar {
+    0%    { transform: translateX(0);} 
+    100%    { transform: translateX(-7%);}  }
+.sacrum{
+    position: relative;
+    animation: sacrum 3000ms  450ms ease-in-out infinite alternate-reverse;   
+    -webkit-animation: sacrum 3000ms  450ms ease-in-out infinite alternate-reverse;} 
+@keyframes sacrum {
+    0%    { transform: translateX(-3px);} 
+    100%   {transform: translateX(3px);}}
