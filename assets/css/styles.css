@@ -110,7 +110,6 @@ a{
     grid-template-columns: repeat(6, 1fr);
     gap:1.5rem;
     background-color: black;
-    z-index: 1;
 }
 .projects h3{
     font-size: clamp(1em, 3.5vw, 3em);
@@ -130,7 +129,7 @@ a{
 #project1{
     grid-column: span 4;
     grid-row: span 2;
-    background-image: url('/assets/images/leaf.jpeg');
+    background-image: url('glowing-train/assets/images/leaf.jpeg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
