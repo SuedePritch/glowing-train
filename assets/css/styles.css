@@ -1,15 +1,15 @@
 :root{
-    --clr-primary-200:hsl(170, 100%, 20%);
-    --clr-primary-400:hsl(170, 100%,40%);
-    --clr-primary-600:hsl(170, 100%, 60%);
-    --clr-primary-800:hsl(170, 100%, 80%);
+    --clr-primary-200:hsl(151, 90%, 20%);
+    --clr-primary-400:hsl(151, 90%, 40%);
+    --clr-primary-600:hsl(151, 90%, 60%);
+    --clr-primary-800:hsl(151, 90%, 80%);
 
-    --clr-accent-200:hsl(257, 100%, 20%);
-    --clr-accent-400:hsl(257, 100%,40%);
-    --clr-accent-600:hsl(257, 100%,60%);
-    --clr-accent-800:hsl(257, 100%, 80%);
+    --clr-accent-200:hsl(271, 90%, 20%);
+    --clr-accent-400:hsl(271, 90%, 40%);
+    --clr-accent-600:hsl(271, 90%, 60%);
+    --clr-accent-800:hsl(271, 90%, 80%);
 }
-
+/* GENERAL */
 *{
     margin: 0;
     padding: 0;
@@ -30,7 +30,7 @@ section{
 }
 
 a{
-    font-size: 1.3em;
+    font-size: clamp(0.75em, 2vw, 3em);
     font-weight: 300;
     text-decoration: none;
 }
@@ -40,7 +40,7 @@ a{
 
 
 
-/* navigation links */
+/* NAVIGATION LINKS */
 .navlinks{
     padding-left:1rem;
     position: fixed;
@@ -48,7 +48,7 @@ a{
     right:0;
     z-index: 2;
     background-color: var(--clr-accent-400);
-    border-top-left-radius: 50px;
+    border-top-left-radius: 5em;
     animation: nav 4s forwards ease;
 }
 
@@ -76,7 +76,7 @@ a{
 }
 
 
-/*  Name and avatar  */
+/*  NAME SECTION  LANDING PAGE  */
 .user-title{
     display: flex;
     flex-direction: column;
@@ -98,13 +98,13 @@ a{
 }
 
 .user-title h1{
-    font-size: 6em;
+    font-size: clamp(3em, 10vw, 20em);
     font-family: 'Arizonia', cursive;
     z-index: 2;
 }
 
 
-/* Project mosaic */
+/* PROJECT SECTION MOSAIC */
 .projects{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -112,19 +112,22 @@ a{
     background-color: black;
 }
 .projects h3{
-    font-size: clamp(1em, 3.5vw, 3em);
+    font-size: clamp(1em, 3.5vw, 6em);
     font-weight: 900;
     color: white;
     text-shadow: 1px 1px 25px black;
 }
 
 .project-title{
+    max-width: 800px;
     position: relative;
     top:50%;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     /* padding:1.25rem; */
     text-align: center;
-    backdrop-filter:blur(6px)
+    backdrop-filter:blur(3px);
+    
 }
 #project1{
     grid-column: span 4;
@@ -169,7 +172,7 @@ a{
 }
 
 
-
+/* ABOUT SECTION */
 
 .about{
     display: flex;
@@ -181,7 +184,7 @@ a{
     max-width:40ch;
     margin: 0 auto;
     padding:0 2.5rem;
-    font-size: 1.5em;
+    font-size: clamp(0.75em, 3vw, 4em);
     font-weight: 300;
     word-wrap: break-word;
 }
@@ -192,13 +195,13 @@ a{
     z-index: 1;  
 }
 
-/* contact section  */
+/* CONTACT SECTION  */
 .contact{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--clr-primary-200);
+    background-color: var(--clr-primary-400);
 }
 .contact h2{
     font-size: 4em;
@@ -255,7 +258,7 @@ a{
     .projects{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
-        gap:0.25rem;
+        gap:0.5rem;
     }
     #project1{
         grid-column: span 2;
