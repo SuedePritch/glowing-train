@@ -1,13 +1,7 @@
 :root{
-    --clr-primary-200:hsl(151, 90%, 20%);
-    --clr-primary-400:hsl(151, 90%, 40%);
-    --clr-primary-600:hsl(151, 90%, 60%);
-    --clr-primary-800:hsl(151, 90%, 80%);
-
-    --clr-accent-200:hsl(271, 90%, 20%);
+    --clr-primary-400:hsl(171, 90%, 40%);
     --clr-accent-400:hsl(271, 90%, 40%);
     --clr-accent-600:hsl(271, 90%, 60%);
-    --clr-accent-800:hsl(271, 90%, 80%);
 }
 /* GENERAL */
 *{
@@ -28,7 +22,9 @@ header{
 section{
     height: 100vh;
 }
-
+h2{
+    font-size: clamp(1.5em, 5vw, 10em);
+}
 a{
     font-size: clamp(0.75em, 2vw, 3em);
     font-weight: 300;
@@ -110,13 +106,20 @@ a{
     grid-template-columns: repeat(6, 1fr);
     gap:1.5rem;
     background-color: black;
+    overflow-x: hidden;
 }
-.projects h3{
+.projects article:hover{
+    /* transform:scale(1.02, 1.02); */
+    box-shadow: inset 0 0 1rem 0 white;
+}
+.projects a{
     font-size: clamp(1em, 3.5vw, 6em);
     font-weight: 900;
     color: white;
     text-shadow: 1px 1px 25px black;
 }
+
+
 
 .project-title{
     max-width: 800px;
@@ -124,7 +127,6 @@ a{
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* padding:1.25rem; */
     text-align: center;
     backdrop-filter:blur(3px);
     
@@ -184,7 +186,7 @@ a{
     max-width:40ch;
     margin: 0 auto;
     padding:0 2.5rem;
-    font-size: clamp(0.75em, 3vw, 4em);
+    font-size: clamp(0.75em, 2vw, 4em);
     font-weight: 300;
     word-wrap: break-word;
 }
@@ -204,34 +206,39 @@ a{
     background-color: var(--clr-primary-400);
 }
 .contact h2{
-    font-size: 4em;
+    margin: 1rem;
+    font-size: clamp(1.5em, 8vw, 10em);
 }
 .contact ul{
     display:flex;
 }
 .contact li{
-    padding: 1rem;
+    margin:0.5rem;
     flex-direction: row;
     list-style: none;
+    border:2px solid black;
+    border-radius: 5px;
+    border-top-left-radius: 3em;
+    border-bottom-right-radius: 3em;
+    background-color: var(--clr-primary-400);
 }
-.contact form{
+.contact a{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    color: white;
 }
-.contact label{
-    margin:0.75rem 0;
-    font-size: 1.3em;
+.contact svg{
+    margin: 1.5rem;
+    height:8vw;
+    width:8vh;
 }
-.contact button{
-    margin-top: 2rem;
-    padding: 2rem 3.5rem;
+.contact li:hover{
     background-color: var(--clr-accent-400);
-    font-size: 1.6em;
-    color:white;
-    border: none;
-    border-radius: 5px;
-    border-top-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+}
+.contact li:hover
+svg{
+    fill: white;
 }
 
 
@@ -283,20 +290,8 @@ a{
         grid-column: span 1;
         grid-row: span 1;
     }
-    .contact h2{
-        font-size: 1.8em;
-    }
     .contact ul{
         flex-direction: column;
         text-align: center;
-    }
-    .contact li{
-        padding:0;
-    }
-    .contact button{
-        padding: 1rem 2rem;
-    }
-    textarea{
-        height: 100px;
     }
 }
