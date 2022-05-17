@@ -99,6 +99,30 @@ a{
     z-index: 2;
 }
 
+/* ABOUT SECTION */
+
+.about{
+    display: flex;
+    background-color: var(--clr-primary-400);
+}
+.about p{
+    display: flex;
+    align-items: center;
+    max-width:40ch;
+    margin: 0 auto;
+    padding:0 2.5rem;
+    font-size: clamp(1.7em, 3vw, 4em);
+    font-weight: 300;
+    word-wrap: break-word;
+}
+#user-avatar{
+    min-width:400px;
+    max-width:40vw;
+    opacity: 0.6;
+    z-index: 1;  
+}
+
+
 
 /* PROJECT SECTION MOSAIC */
 .projects{
@@ -109,7 +133,6 @@ a{
     overflow-x: hidden;
 }
 .projects article:hover{
-    /* transform:scale(1.02, 1.02); */
     box-shadow: inset 0 0 1rem 0 white;
 }
 .projects a{
@@ -173,29 +196,6 @@ a{
     background-size: 100% 100%;
 }
 
-
-/* ABOUT SECTION */
-
-.about{
-    display: flex;
-    background-color: var(--clr-primary-400);
-}
-.about p{
-    display: flex;
-    align-items: center;
-    max-width:40ch;
-    margin: 0 auto;
-    padding:0 2.5rem;
-    font-size: clamp(1.7em, 3vw, 4em);
-    font-weight: 300;
-    word-wrap: break-word;
-}
-#user-avatar{
-    min-width:450px;
-    max-width:40vw;
-    opacity: 0.6;
-    z-index: 1;  
-}
 
 /* CONTACT SECTION  */
 .contact{
