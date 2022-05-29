@@ -1,6 +1,4 @@
-# Module 2 Challenge
-
-## Professional Portfolio
+# Professional Portfolio
 
 ### The goal of this project is to display completed projects to a employer to demonstate my skills.
 
